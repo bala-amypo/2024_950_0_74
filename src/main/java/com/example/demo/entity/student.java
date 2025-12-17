@@ -5,14 +5,17 @@ package com.example.demo.entity;
 import jakarta.persistance.entity;
 import jakarta.persistance.GeneratedValue;
 import jakarta.persistence.GenerationTpe;
-import jakarta.persistance.id;
+import jakarta.persistance.Id;
 
-import java.time.LocalDate;
 
+@entity
 public class student {
-    private int id;
+    private Integer id;
     private String name;
     private String email;
+    public int getId(){
+        retur
+    }
    
     private float cgpa;
     public int getId() {
