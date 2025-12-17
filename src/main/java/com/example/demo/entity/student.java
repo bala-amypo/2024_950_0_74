@@ -2,26 +2,28 @@ package com.example.demo.entity;
 
 
 
-import jakarta.persistance.entity;
-import jakarta.persistance.GeneratedValue;
+import jakarta.persistence.entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationTpe;
-import jakarta.persistance.Id;
+import jakarta.persistence.Id;
 
 
 @entity
 public class student {
+    @Id
+    @GeneratedValue(statergy = GenerationTpe.IDENTITY)
     private Integer id;
     private String name;
     private String email;
     public int getId(){
-        retur
+        return id;
     }
    
     private float cgpa;
-    public int getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getName() {
@@ -37,17 +39,11 @@ public class student {
         this.email = email;
     }
     
-    public float getCgpa() {
-        return cgpa;
-    }
-    public void setCgpa(float cgpa) {
-        this.cgpa = cgpa;
-    }
-    public student(int id, String name, String email, float cgpa) {
+   
+    public student(Integer id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.cgpa = cgpa;
     }
 }
 
