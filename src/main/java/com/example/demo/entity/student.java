@@ -1,5 +1,12 @@
 package com.example.demo.entity;
 
+
+
+import jakarta.persistance.entity;
+import jakarta.persistance.GeneratedValue;
+import jakarta.persistence.GenerationTpe;
+import jakarta.persistance.id;
+
 import java.time.LocalDate;
 
 public class student {
